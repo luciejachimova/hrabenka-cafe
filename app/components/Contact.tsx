@@ -23,10 +23,10 @@ export default function Contact() {
             <div className="space-y-2 text-[#6e4e37]/80">
               <p>
                 <a
-                  href="tel:+420123456789"
+                  href="tel:+420770421947"
                   className="hover:text-[#b89b6d] transition-colors duration-300"
                 >
-                  +420 777 618 181
+                  +420 770 421 947
                 </a>
               </p>
               <p>

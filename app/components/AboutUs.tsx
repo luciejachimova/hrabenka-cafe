@@ -8,7 +8,7 @@ export default function About() {
             <div className="w-16 h-px bg-[#b89b6d] mx-auto mb-6"></div>
 
           <p className="text-[#6e4e37]/70 font-light max-w-3xl mx-auto text-lg">
-            Poznajte příběh kavárny, kde tradice potkává moderní přístup k dobrému jídlu a pití
+            Poznejte příběh kavárny, kde tradice potkává moderní přístup k dobrému jídlu a pití
           </p>
         </div>
 
@@ -22,7 +22,7 @@ export default function About() {
               </h3>
               <p className="text-[#6e4e37]/80 leading-relaxed font-light">
                 Místě, kde se setkává elegance s poctivou chutí. Užijte si výběrovou kávu,
-                domácí zákusky a prostředí připomínající aristokratickou tradici.
+                domácí zákusky a příjemné prostředí.
               </p>
             </div>
 
@@ -32,7 +32,7 @@ export default function About() {
               </h3>
               <p className="text-[#6e4e37]/80 leading-relaxed font-light">
                 Každý šálek kávy připravujemo s péčí a každý dezert vytváříme
-                podle tradičních rodinných receptů. Věříme, že kvalita je v detailech.
+                podle tradičních receptů. Věříme, že kvalita je v detailech.
               </p>
             </div>
 
