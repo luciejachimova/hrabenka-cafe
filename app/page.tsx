@@ -4,6 +4,7 @@ import Menu from "@/app/components/Menu"
 import HeroSection from "@/app/components/HeroSection";
 import AboutUs from "@/app/components/AboutUs";
 import Footer from "@/app/components/Footer";
+import Gallery from "@/app/components/Gallery";
 
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
       </div>
 
       <div id="galerie">
-
+        <Gallery/>
       </div>
 
       <div id="kontakt">

@@ -1,124 +1,119 @@
+"use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+type Photo = {
+  src: string;
+  alt: string;
+};
 
 export default function Gallery() {
-
-  const photos = [
-
-    {
-      src: "/images/gallery/cafe-1.jpg",
-      alt: "Interiér kavárny Hraběnka",
-      category: "interiér"
-    },
-    {
-      src: "/images/gallery/cafe-3.jpg",
-      alt: "Exteriér kavárny",
-      category: "exteriér"
-    },
-    {
-      src: "/images/gallery/coffee-1.jpg",
-      alt: "Šálek cappuccina",
-      category: "káva"
-    },
-    {
-      src: "/images/gallery/dessert-1.jpg",
-      alt: "Domácí cheesecake",
-      category: "dezerty"
-    },
-    {
-      src: "/images/gallery/cafe-2.jpg",
-      alt: "Útulný koutek kavárny",
-      category: "interiér"
-    },
-    {
-      src: "/images/gallery/coffee-2.jpg",
-      alt: "Latte art",
-      category: "káva"
-    },
-    {
-      src: "/images/gallery/dessert-2.jpg",
-      alt: "Hraběnčin dort",
-      category: "dezerty"
-    },
-    {
-      src: "/images/gallery/breakfast-1.jpg",
-      alt: "Snídaně",
-      category: "snídaně"
-    },
-    {
-      src: "/images/gallery/icecream-1.jpg",
-      alt: "Zmrzlinové poháry",
-      category: "zmrzlina"
-    }
+  const photos: Photo[] = [
+    { src: "/images/gallery/photo-1.jpg", alt: "Interiér kavárny Hraběnka" },
+    { src: "/images/gallery/photo-5.jpg", alt: "Káva a dezert" },
+    { src: "/images/gallery/photo-10.jpg", alt: "Dekorace" },
+    { src: "/images/gallery/photo-4.jpg", alt: "Domácí dezert" },
+    { src: "/images/gallery/photo-9.jpg", alt: "Útulný koutek kavárny" },
+    { src: "/images/gallery/photo-7.jpg", alt: "Šálek cappuccina" },
   ];
 
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const close = () => setActiveIndex(null);
+
+  const prev = () => {
+    setActiveIndex((i) => {
+      if (i === null) return i;
+      return i === 0 ? photos.length - 1 : i - 1;
+    });
+  };
+
+  const next = () => {
+    setActiveIndex((i) => {
+      if (i === null) return i;
+      return i === photos.length - 1 ? 0 : i + 1;
+    });
+  };
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
+
   return (
-    <div className="bg-[#fdf6ee] min-h-screen py-24">
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 mb-16">
-        <div className="text-center">
-          <h2 className="text-4xl font-serif text-[#6e4e37] font-medium mb-4">
-            Galerie
-          </h2>
-          <div className="w-16 h-px bg-[#b89b6d] mx-auto mb-6"></div>
-          <p className="text-[#6e4e37]/70 font-light max-w-2xl mx-auto text-lg">
-            Nahlédněte do naší kavárny a ochutnejte atmosféru očima
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <>
+      {/* GALERIE */}
+      <div className="bg-[#fdf6ee] py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {photos.map((photo, index) => (
             <div
               key={index}
-              className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              onClick={() => setActiveIndex(index)}
+              className="cursor-pointer group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition"
             >
-              <div className="w-full h-full bg-gradient-to-br from-[#b89b6d]/20 to-[#6e4e37]/10 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <span className="text-4xl mb-2 block opacity-30">📷</span>
-                  <p className="text-[#6e4e37]/50 text-sm italic">
-                    {photo.alt}
-                  </p>
-                </div>
-              </div>
-
-              {/* Tento kod odkomentujete az budete mit fotky: */}
-              {/*
               <Image
                 src={photo.src}
                 alt={photo.alt}
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              */}
-
-              <div className="absolute inset-0 bg-gradient-to-t from-[#6e4e37]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white text-sm font-light">
-                    {photo.alt}
-                  </p>
-                  <span className="text-[#b89b6d] text-xs uppercase tracking-wider">
-                    {photo.category}
-                  </span>
-                </div>
-              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {photos.length === 0 && (
-        <div className="max-w-2xl mx-auto text-center py-20">
-          <span className="text-6xl mb-4 block">📸</span>
-          <h3 className="text-2xl font-serif text-[#6e4e37] mb-3">
-            Galerie se připravuje
-          </h3>
-          <p className="text-[#6e4e37]/70">
-            Brzy zde najdete fotografie z naší kavárny
-          </p>
+      {/* LIGHTBOX */}
+      {activeIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+          onClick={close}
+        >
+          <div
+            className="relative max-w-5xl w-full h-[80vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={photos[activeIndex].src}
+              alt={photos[activeIndex].alt}
+              fill
+              className="object-contain"
+            />
+
+            <button
+              onClick={close}
+              className="absolute top-4 right-4 text-white text-3xl"
+            >
+              ✕
+            </button>
+
+            <button
+              onClick={prev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl"
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={next}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl"
+            >
+              ›
+            </button>
+
+            {/* popisek */}
+            <div className="absolute bottom-4 left-0 right-0 text-center text-white text-sm opacity-80">
+              {photos[activeIndex].alt}
+            </div>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
