@@ -28,18 +28,9 @@ export default function HeroSection() {
         </div>
 
         <p className="text-xl text-[#6e4e37]/70 mb-12 leading-relaxed font-light max-w-2xl mx-auto">
-          Elegance a chuť v srdci města — poctivá káva, domácí dezerty, klidná atmosféra
+          Elegance a chuť v srdci města Rabí — italská káva Vergnano, poctivé dezerty, klidná atmosféra
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="#nabidka"
-            className="bg-[#6e4e37] text-white px-10 py-4 font-light uppercase tracking-wider hover:bg-[#b89b6d] transition-colors duration-300 text-sm"
-          >
-            Prohlédnout menu
-          </a>
-
-        </div>
       </div>
 
       <div className="absolute top-1/3 left-20 w-2 h-2 bg-[#b89b6d] rounded-full opacity-40 animate-pulse hidden lg:block"></div>
