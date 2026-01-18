@@ -8,7 +8,7 @@ export default function About() {
             <div className="w-16 h-px bg-[#b89b6d] mx-auto mb-6"></div>
 
           <p className="text-[#6e4e37]/70 font-light max-w-3xl mx-auto text-lg">
-            Poznejte příběh kavárny, kde tradice potkává moderní přístup k dobrému jídlu a pití
+            Poznejte příběh kavárnyv malebném městečku Rabí, kde se tradice potkává s moderním přístupem k dobrému jídlu a pití
           </p>
         </div>
 
@@ -21,8 +21,8 @@ export default function About() {
                 Vítejte v kavárně Hraběnka
               </h3>
               <p className="text-[#6e4e37]/80 leading-relaxed font-light">
-                Místě, kde se setkává elegance s poctivou chutí. Užijte si výběrovou kávu,
-                domácí zákusky a příjemné prostředí.
+                Místě, kde se setkává elegance s poctivou chutí. Užijte si italskou kávu Vergnano,
+                poctivé dezerty a klidnou atmosféru.
               </p>
             </div>
 
@@ -49,15 +49,6 @@ export default function About() {
 
           {/* Pravý sloupec */}
           <div className="space-y-8">
-            <div className="border-b border-[#6e4e37]/20 pb-6">
-              <h3 className="text-xl font-medium text-[#6e4e37] mb-3 tracking-wide uppercase">
-                Rodinná tradice
-              </h3>
-              <p className="text-[#6e4e37]/80 leading-relaxed font-light">
-                Recepty našich dezertů pocházejí z rodinné sbírky
-                a jsou předávány už třetí generací.
-              </p>
-            </div>
 
             <div className="border-b border-[#6e4e37]/20 pb-6">
               <h3 className="text-xl font-medium text-[#6e4e37] mb-3 tracking-wide uppercase">
@@ -65,7 +56,7 @@ export default function About() {
               </h3>
               <p className="text-[#6e4e37]/80 leading-relaxed font-light">
                 V našem útulném prostředí najdete klid od ruchu města.
-                Ať už přijdete na ranní kávu nebo odpolední dezert,
+                Ať už přijdete na ranní kávu, slanou pochoutku nebo odpolední dezert,
                 vždy vás uvítáme s úsměvem.
               </p>
             </div>
@@ -76,7 +67,7 @@ export default function About() {
               </h3>
               <p className="text-[#6e4e37]/80 leading-relaxed font-light">
                 Používáme pouze nejkvalitnější suroviny od prověřených dodavatelů.
-                Každý den připravujemo s maximální péčí a pozorností.
+                Každý den připravujeme s maximální péčí a pozorností.
               </p>
             </div>
           </div>

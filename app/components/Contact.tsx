@@ -11,10 +11,21 @@ export default function Contact() {
         <div className="grid gap-12 md:grid-cols-4 text-center text-[#6e4e37]">
 
           <div className="space-y-4">
-            <h3 className="text-lg font-medium uppercase tracking-wide text-[#b89b6d]">Adresa</h3>
+            <h3 className="text-lg font-medium uppercase tracking-wide text-[#b89b6d]">
+              Adresa
+            </h3>
+
             <div className="space-y-2 text-[#6e4e37]/80">
-              <p>Rabí, 342 01 Rabí</p>
-              <p>Česká republika</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rabí+175+342+01+Rabí"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#b89b6d] transition-colors duration-300 inline-block"
+              >
+                <p>Rabí 175</p>
+                <p>342 01 Rabí</p>
+                <p>Česká republika</p>
+              </a>
             </div>
           </div>
 
@@ -43,8 +54,7 @@ export default function Contact() {
           <div className="space-y-4">
             <h3 className="text-lg font-medium uppercase tracking-wide text-[#b89b6d]">Otevírací doba</h3>
             <div className="space-y-2 text-[#6e4e37]/80">
-              <p>Po - Pá: 8:00 - 18:00</p>
-              <p>So - Ne: 9:00 - 19:00</p>
+              <p>Po - Ne: 10:00 - 18:00</p>
             </div>
           </div>
 
