@@ -9,8 +9,8 @@ export default function HeroSection() {
           <Image
             src="/images/hrabenka.png"
             alt="Hraběnka logo"
-            width={320}
-            height={320}
+            width={360}
+            height={360}
             className="object-cover rounded-full"
           />
         </div>

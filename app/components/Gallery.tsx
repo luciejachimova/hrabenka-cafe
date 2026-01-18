@@ -49,34 +49,60 @@ export default function Gallery() {
 
   return (
     <>
-      {/* GALERIE */}
-      <div className="bg-[#fdf6ee] py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className="cursor-pointer group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* ===== SEKCE ===== */}
+      <section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center mb-16">
+          <h2 className="text-4xl font-serif text-[#6e4e37] font-medium mb-4">
+            Naše nabídka
+          </h2>
 
-      {/* LIGHTBOX */}
+          <div className="w-16 h-px bg-[#b89b6d] mx-auto mb-6" />
+
+          <p className="text-[#6e4e37]/70 font-light max-w-3xl mx-auto text-lg">
+            Nabízíme klasické dorty, sezónní dezerty, snídaně i kvalitní kávu
+            z italské pražírny. Na přání připravujeme rodinné oslavy.
+          </p>
+        </div>
+
+        {/* ===== GALERIE ===== */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {photos.map((photo, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className="
+                  cursor-pointer
+                  group
+                  relative
+                  aspect-square
+                  overflow-hidden
+                  rounded-xl
+                  shadow-sm
+                  hover:shadow-lg
+                  transition
+                "
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== LIGHTBOX ===== */}
       {activeIndex !== null && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
           onClick={close}
         >
           <div
-            className="relative max-w-5xl w-full h-[80vh]"
+            className="relative max-w-6xl w-full h-[80vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -86,6 +112,7 @@ export default function Gallery() {
               className="object-contain"
             />
 
+            {/* zavřít */}
             <button
               onClick={close}
               className="absolute top-4 right-4 text-white text-3xl"
@@ -93,22 +120,23 @@ export default function Gallery() {
               ✕
             </button>
 
+            {/* šipky */}
             <button
               onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl opacity-80 hover:opacity-100"
             >
               ‹
             </button>
 
             <button
               onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl opacity-80 hover:opacity-100"
             >
               ›
             </button>
 
             {/* popisek */}
-            <div className="absolute bottom-4 left-0 right-0 text-center text-white text-sm opacity-80">
+            <div className="absolute bottom-6 left-0 right-0 text-center text-white text-sm opacity-80">
               {photos[activeIndex].alt}
             </div>
           </div>

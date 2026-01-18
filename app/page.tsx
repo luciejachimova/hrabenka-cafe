@@ -18,10 +18,6 @@ export default function Home() {
         <AboutUs/>
       </div>
 
-      <div id="nabidka">
-        <Menu/>
-      </div>
-
       <div id="galerie">
         <Gallery/>
       </div>
