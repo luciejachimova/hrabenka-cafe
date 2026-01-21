@@ -27,20 +27,6 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center space-x-8">
             <a
-              href="#onas"
-              className="text-[#6e4e37] font-light hover:text-[#b89b6d] transition-colors duration-300 relative group"
-            >
-              O nás
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b89b6d] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="#nabidka"
-              className="text-[#6e4e37] font-light hover:text-[#b89b6d] transition-colors duration-300 relative group"
-            >
-              Nabídka
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b89b6d] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
               href="#galerie"
               className="text-[#6e4e37] font-light hover:text-[#b89b6d] transition-colors duration-300 relative group"
             >

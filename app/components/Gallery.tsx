@@ -53,15 +53,8 @@ export default function Gallery() {
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center mb-16">
           <h2 className="text-4xl font-serif text-[#6e4e37] font-medium mb-4">
-            Naše nabídka
+            Galerie
           </h2>
-
-          <div className="w-16 h-px bg-[#b89b6d] mx-auto mb-6" />
-
-          <p className="text-[#6e4e37]/70 font-light max-w-3xl mx-auto text-lg">
-            Nabízíme klasické dorty, sezónní dezerty, snídaně i kvalitní kávu
-            z italské pražírny. Na přání připravujeme rodinné oslavy.
-          </p>
         </div>
 
         {/* ===== GALERIE ===== */}

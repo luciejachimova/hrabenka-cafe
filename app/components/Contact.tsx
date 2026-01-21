@@ -42,10 +42,10 @@ export default function Contact() {
               </p>
               <p>
                 <a
-                  href="mailto:info@hrabenka.cz"
+                  href="mailto:kavarnahrabenka@seznam.cz"
                   className="hover:text-[#b89b6d] transition-colors duration-300"
                 >
-                  info@hrabenka.cz
+                  kavarnahrabenka@seznam.cz
                 </a>
               </p>
             </div>
