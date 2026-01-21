@@ -6,7 +6,9 @@ const sans = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata = {
   title: 'Hraběnka – Kavárna & Cukrárna',
-  icon: 'Hraběnka – Kavárna & Cukrárna'
+  icons: {
+    icon: '/images/hrabenka.png'
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

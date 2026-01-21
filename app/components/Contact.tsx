@@ -54,7 +54,8 @@ export default function Contact() {
           <div className="space-y-4">
             <h3 className="text-lg font-medium uppercase tracking-wide text-[#b89b6d]">Otevírací doba</h3>
             <div className="space-y-2 text-[#6e4e37]/80">
-              <p>Po - Ne: 10:00 - 18:00</p>
+              <p>Po - Pá: 10:00 - 18:00</p>
+              <p>So - Ne: 9:00 - 18:00</p>
             </div>
           </div>
 
