@@ -28,7 +28,7 @@ export default function HeroSection() {
         </div>
 
         <p className="text-xl text-[#6e4e37]/70 mb-12 leading-relaxed font-light max-w-2xl mx-auto">
-          Elegance a chuť v srdci města Rabí — italská káva Vergnano, poctivé dezerty, klidná atmosféra
+          Elegance a chuť v srdci města Rabí — italská káva Vergnano, poctivé dezerty, příjemná atmosféra
         </p>
 
       </div>

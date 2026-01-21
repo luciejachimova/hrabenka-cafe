@@ -63,7 +63,7 @@ export default function Contact() {
             <div className="space-y-2 text-[#6e4e37]/80">
               <p>
                 <a
-                  href="https://www.facebook.com/pavla.myslikova.9"
+                  href="https://www.facebook.com/profile.php?id=61586315678056"
                   className="hover:text-[#b89b6d] transition-colors duration-300"
                 >
                   Facebook
@@ -71,7 +71,7 @@ export default function Contact() {
               </p>
               <p>
                 <a
-                  href="https://instagram.com/hrabenka"
+                  href="https://www.instagram.com/kavarnahrabenka/"
                   className="hover:text-[#b89b6d] transition-colors duration-300"
                 >
                   Instagram
