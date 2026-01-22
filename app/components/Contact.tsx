@@ -1,3 +1,4 @@
+import { Facebook, Instagram } from "lucide-react";
 export default function Contact() {
   return (
     <section className="bg-[#f7e9d6] py-20 px-6 sm:px-12">
@@ -62,22 +63,27 @@ export default function Contact() {
           <div className="space-y-4">
             <h3 className="text-lg font-medium uppercase tracking-wide text-[#b89b6d]">Sledujte nás</h3>
             <div className="space-y-2 text-[#6e4e37]/80">
-              <p>
+              <div className="flex justify-center gap-6">
                 <a
                   href="https://www.facebook.com/profile.php?id=61586315678056"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-[#b89b6d] transition-colors duration-300"
+                  aria-label="Facebook"
                 >
-                  Facebook
+                  <Facebook size={28} strokeWidth={1.5} />
                 </a>
-              </p>
-              <p>
+
                 <a
                   href="https://www.instagram.com/kavarnahrabenka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-[#b89b6d] transition-colors duration-300"
+                  aria-label="Instagram"
                 >
-                  Instagram
+                  <Instagram size={28} strokeWidth={1.5} />
                 </a>
-              </p>
+              </div>
             </div>
           </div>
 

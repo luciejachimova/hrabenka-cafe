@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <section id="onas" className="py-24 px-12 sm:px-12  bg-[#fdf6ee]">
+    <section id="onas" className="py-24 px-12 sm:px-12 bg-[#fdf6ee]">
       <div className="max-w-6xl mx-auto px-3 sm:px-24">
 
-        <div className="text-center mb-20">
+        <div className="text-center mb-8">
           <h2 className="text-4xl font-serif text-[#6e4e37] font-medium mb-4">
             Vítejte v kavárně Hraběnka
           </h2>

@@ -8,6 +8,23 @@ export const metadata = {
   title: 'Hraběnka – Kavárna & Cukrárna',
   icons: {
     icon: '/images/hrabenka.png'
+  },
+  openGraph: {
+    title: 'Kavárna Hraběnka',
+    description:
+           'Elegantní kavárna a cukrárna Hraběnka v městečku Rabí. Výběrová káva, poctivé dezerty a atmosféra zámecké kavárny.',
+    url: 'https://www.kavarnahrabenka.cz',
+    siteName: 'Kavárna Hraběnka',
+    locale: 'cs_CZ',
+    type: 'website',
+    images: [
+      {
+        url: '/images/hrabenka.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Kavárna Hraběnka'
+      }
+    ]
   }
 }
 
